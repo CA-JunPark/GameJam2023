@@ -1,0 +1,29 @@
+	Character: jukebox
+	object : get personality (music) LP? CD? note"
+	action: steal
+	From who? (music) artist with Genres of music? 
+		convert a genre into a emotion or personality
+	
+	As 	a jukebox , I want to get personality, so I can be a human.
+	
+	GamePlay: 
+		2.flabbybird 
+		3.music tab
+		
+		loop > randon spawning > 
+		2d pokemon map > jukebox chasing artists to steal its music > music gets louder (HORROR?)
+		movement: turn diagonal,wasd
+		
+		Genre: ROCK, classic, pop, jazz
+		(fast, medium, slow) one instrument at a time
+		
+	esteregg: HAM JAM
+	
+	
+		
+	
+	
+
+	
+	
+	
