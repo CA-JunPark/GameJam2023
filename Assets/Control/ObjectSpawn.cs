@@ -17,6 +17,7 @@ public class ObjectSpawn : MonoBehaviour
     float spawnX;
 
     float spawnY;
+    int randInt;
 
     // Start is called before the first frame update
     void Start()
@@ -32,7 +33,7 @@ public class ObjectSpawn : MonoBehaviour
     {
         interval -= Time.deltaTime;
         if (interval < 0){
-            int randInt = (int)(Random.Range(3,cellNum) - 1.1);
+            randInt = (int)(Random.Range(3,cellNum) - 1.1);
             spawnY = grid[randInt];
             contract.transform.position = new Vector3(spawnX, spawnY);
             Instantiate(contract);

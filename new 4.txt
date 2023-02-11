@@ -11,7 +11,7 @@
 		3.music tab
 		
 		loop > randon spawning > 
-		2d pokemon map > jukebox chasing artists to steal its music > music gets louder (HORROR?)
+		2d tile grid? map > jukebox chasing artists to steal its music > music gets louder (HORROR?)
 		movement: turn diagonal,wasd
 		
 		Genre: ROCK, classic, pop, jazz
@@ -19,9 +19,44 @@
 		
 	esteregg: HAM JAM
 	
-	
+	----------------------------------------
+	End Game; 
+		win;
+			Catch all 3(4) musician
+			OR
+			contract = 1 score Musician = 30 score
+				then some score (like 200) is needed towin the game
+		lose;
+	disc mechanics
+		collect
+			Option1: one disc > unlock a skill to shoot a disc perminauntly
+			OR 
+			Option2: one disc > one projectile to shoot
+		shoot 
+			shoot horizontally to the right 
+				> hit musician 
+					> musician gets closer to the jukebox while blinking (same running animation)
+			hit N times to catch one musician
+	Collecting Contracts
+		Option1: score + 1 
+	----------------------------------------
+	Sounds
+		Music 1,2, and 3 (maybe 4) with different genre
+		collecting a contract
+		collecting a disc
+		shooting a disc
+		hit by a disc
+		caught musician
+	----------------------------------------
+	Animation
+		Running
+			jukebox and musician 123 (maybe 4)
+		Jumping
+			last thing to do 
+				if we dont have time, we will just use running animation 
+		contract floating
+		disc spinning
 		
-	
 	
 
 	
