@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 1217559562677537040}
   - component: {fileID: 8882084176511522562}
   - component: {fileID: 1676749819781982471}
-  - component: {fileID: 50329232719385101}
+  - component: {fileID: 1380569638151867134}
   m_Layer: 0
-  m_Name: Disc
+  m_Name: ObejctDisc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6133372232154859925}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.25000006, y: -0.059111476, z: 1}
+  m_LocalPosition: {x: 6.93, y: 0.99, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -124,7 +124,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &50329232719385101
+--- !u!114 &1380569638151867134
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,6 +133,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6133372232154859925}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc02820ab55df4845967afc962d4b8de, type: 3}
+  m_Script: {fileID: 11500000, guid: b70148eeddd9ce646a824b4f4d453edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

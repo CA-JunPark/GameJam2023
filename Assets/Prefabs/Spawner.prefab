@@ -45,4 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contract: {fileID: 1522019952007674517, guid: 714592fd68c4da2459d5b82f2f5b309b, type: 3}
-  interval: 2
+  disc: {fileID: 6133372232154859925, guid: 3a3c21c0c71888c4da15782924803e87, type: 3}
+  interval: 1.5
