@@ -21,25 +21,12 @@
 
 ------------------------------------
 	End Game; 
-        win;
-            Catch all 3(4) musician
-            OR
-            contract = 1 score Musician = 30 score
-                then some score (like 200) is needed to win the game
+        win;NO WIN CONDITION
         lose;
-            Obstacles with HP (indicates with Hearts or Gears)
-	disc mechanics;
-        collect;
-            Option1: one disc > unlock a skill to shoot a disc perminauntly
-            OR 
-            Option2: one disc > one projectile to shoot
-	shoot; (NEED A KEY)
-        shoot horizontally to the right 
-                 > hit musician 
-                         > musician gets closer to the jukebox while blinking (same running animation)
-        hit N times to catch one musician
+            Obstacles with life of 3 (indicates with Hearts or Gears)
+	
 	Collecting Contracts
-        Option1: 1 score Option2: N Contracts make game speed faster 
+       N Contracts make game speed faster 
 ----------------------------------------
     Theme
         Background (Bar)
@@ -53,8 +40,13 @@ Sounds
         hit by a disc
         caught musician
 
-	
-
+Obstacle
+	One or two (table/trashBin)
+Spinning Disc
+Floating Contract
+Running Anim for Jukebox and a musician
+Background (could be just wooden tile)	
+symmetric ground 
 	
 	
 	

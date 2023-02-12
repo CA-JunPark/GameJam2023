@@ -17,13 +17,7 @@ public class CharacterMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P)){
-            speed += 1;
-        }
-        if (characterSpeed != speed ){
-            characterSpeed = speed;
-        }
-
+       
     }
 
 }

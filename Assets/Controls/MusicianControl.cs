@@ -50,6 +50,8 @@ public class MusicianControl : MonoBehaviour
             Destroy(gameObject);
             MusicianSpawn.capturedCount ++;
             MusicianSpawn.spawned = false;
+            CharacterMovement.characterSpeed ++;
+            Debug.Log(CharacterMovement.characterSpeed);
         }
     }
 

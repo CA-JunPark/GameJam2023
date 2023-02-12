@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8567722353246244638}
   m_Layer: 9
   m_Name: Musician1
-  m_TagString: Untagged
+  m_TagString: Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -146,4 +146,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b161bad4b145374eae292d3db42cfdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slowPower: 30
