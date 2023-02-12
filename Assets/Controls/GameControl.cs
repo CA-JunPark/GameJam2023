@@ -15,10 +15,13 @@ public class GameControl : MonoBehaviour
     GameObject life3;
 
     GameObject start;
-    Button startButton;
+    GameObject credits;
+    Credits creditScript;
+    GameObject controls;
     GameObject exit;
-    Button exitButton;
     GameObject canvas;
+
+    Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -35,11 +38,15 @@ public class GameControl : MonoBehaviour
         life2 = lifes.transform.GetChild(1).gameObject;
         life3 = lifes.transform.GetChild(2).gameObject;
         start = GameObject.Find("Start");
-        startButton = start.GetComponent<Button>();
+        credits = GameObject.Find("Credits");
+        creditScript = GameObject.Find("Credits").GetComponent<Credits>();
+        controls = GameObject.Find("Controls");
         exit = GameObject.Find("Exit");
-        exitButton = exit.GetComponent<Button>();
+        
         canvas = GameObject.Find("Canvas");
         
+        animator = GetComponent<Animator>();
+
         Stop();
     }
 
@@ -63,13 +70,20 @@ public class GameControl : MonoBehaviour
         jump.enabled = true;
         objectSpawn.enabled = true;
         musicianSpawn.enabled = true;
+        musicianSpawn.ResetTimer();
 
         start.SetActive(false);
         exit.SetActive(false);
+        credits.SetActive(false);
+        creditScript.Close();
+        controls.SetActive(false);
+
         life = 3;
         life1.SetActive(true);
         life2.SetActive(true);
         life3.SetActive(true);
+
+        animator.SetBool("Running", true);
         //TODO Score Reset
     }
 
@@ -78,14 +92,21 @@ public class GameControl : MonoBehaviour
         jump.enabled = false;
         objectSpawn.enabled = false;
         musicianSpawn.enabled = false;
+        MusicianSpawn.spawned = false;
 
         GameObject[] objects = GameObject.FindGameObjectsWithTag("Finish");
         foreach (GameObject o in objects){
             Destroy(o);
         }
 
+        animator.SetBool("Running", false);
+
         start.SetActive(true);
+        credits.SetActive(true);
+        controls.SetActive(true);
         exit.SetActive(true);
+
+        Shooting.loaded = false;
     }
 
     void OnTriggerEnter2D(Collider2D collider)

@@ -19,7 +19,6 @@ public class MusicianSpawn : MonoBehaviour
         Vector3 spawnPos = new Vector3(initialX, transform.position.y + 1,0);
         musician.transform.position = spawnPos;
        
-
         timer = NextSpawnTime;
     }
 
@@ -34,6 +33,9 @@ public class MusicianSpawn : MonoBehaviour
             timer = NextSpawnTime;
             }   
         }
-       
+    }
+
+    public void ResetTimer(){
+        timer = NextSpawnTime;
     }
 }

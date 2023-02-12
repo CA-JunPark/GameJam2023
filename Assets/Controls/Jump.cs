@@ -7,18 +7,23 @@ public class Jump : MonoBehaviour
     Rigidbody2D rgb;
     public float power = 3;
     bool groundCheck;
+    AudioSource jumpSound;
     // Start is called before the first frame update
     void Start()
     {
         rgb = GetComponent<Rigidbody2D>();
+        jumpSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButton(0)){
-            //TODO Jump sound
-            if (groundCheck) rgb.velocity = Vector2.up * power;
+        if (Input.GetKeyDown(KeyCode.Z) || Input.GetMouseButton(0)){
+            if (groundCheck) {
+                PlaySound();
+                rgb.velocity = Vector2.up * power;
+            }
+
         }
     }
 
@@ -34,6 +39,10 @@ public class Jump : MonoBehaviour
         if (collider.gameObject.layer == 6){
             groundCheck = false;
         }
+    }
+
+    void PlaySound(){
+        jumpSound.Play();
     }
 
 

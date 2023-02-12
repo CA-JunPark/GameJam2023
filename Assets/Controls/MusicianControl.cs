@@ -10,6 +10,7 @@ public class MusicianControl : MonoBehaviour
     float interval;
     float nextPosX;
     bool spawning = true;
+    AudioSource hitSound;
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +19,7 @@ public class MusicianControl : MonoBehaviour
         jukeBoxX = GameObject.Find("Character").transform.position.x;
         interval = (initialX - jukeBoxX) / 4;
         nextPosX = CalcNextPosX();
-        
+        hitSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -42,6 +43,7 @@ public class MusicianControl : MonoBehaviour
 
     public void Hit(){
         hit = true;
+        PlayHit();
     }
 
     void OnTriggerEnter2D(Collider2D collider)
@@ -51,12 +53,15 @@ public class MusicianControl : MonoBehaviour
             MusicianSpawn.capturedCount ++;
             MusicianSpawn.spawned = false;
             CharacterMovement.characterSpeed ++;
-            Debug.Log(CharacterMovement.characterSpeed);
         }
     }
 
     float CalcNextPosX(){
         return transform.position.x - interval;
+    }
+
+    void PlayHit(){
+        hitSound.Play();
     }
     
 }
