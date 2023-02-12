@@ -49,6 +49,7 @@ public class MusicianControl : MonoBehaviour
         if (collider.gameObject.layer == 11){
             Destroy(gameObject);
             MusicianSpawn.capturedCount ++;
+            MusicianSpawn.spawned = false;
         }
     }
 

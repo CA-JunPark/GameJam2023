@@ -6,6 +6,7 @@ public class Shooting : MonoBehaviour
 {
     public GameObject disc;
     public float offset = 1;
+    public static bool loaded = false;
 
     // Start is called before the first frame update
     void Start()
@@ -16,10 +17,11 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // TODO add constraints
         if (Input.GetKeyDown(KeyCode.Z)){
-            disc.transform.position = gameObject.GetComponent<BoxCollider2D>().bounds.center + (Vector3.right * offset);
-            Instantiate(disc);
+            if (loaded){
+                disc.transform.position = gameObject.GetComponent<BoxCollider2D>().bounds.center + (Vector3.right * offset);
+                Instantiate(disc);
+            }
         }
     }
 }
