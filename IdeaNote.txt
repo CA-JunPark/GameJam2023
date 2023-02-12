@@ -33,7 +33,7 @@
             Option1: one disc > unlock a skill to shoot a disc perminauntly
             OR 
             Option2: one disc > one projectile to shoot
-	shoot;
+	shoot; (NEED A KEY)
         shoot horizontally to the right 
                  > hit musician 
                          > musician gets closer to the jukebox while blinking (same running animation)
@@ -52,6 +52,7 @@ Sounds
         shooting a disc
         hit by a disc
         caught musician
+
 	
 
 	

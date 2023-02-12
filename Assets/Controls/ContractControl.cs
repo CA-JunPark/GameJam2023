@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectControl : MonoBehaviour
+public class ContractControl : MonoBehaviour
 {
     
     // Start is called before the first frame update
@@ -20,11 +20,7 @@ public class ObjectControl : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.gameObject.name == "Character"){
-            Destroy(this.gameObject);
-        }
-        //TODO????
-        if (collider.gameObject.layer == 7){
+        if (collider.gameObject.layer == 8 || collider.gameObject.layer == 7){
             Destroy(this.gameObject);
         }
     }
