@@ -47,5 +47,6 @@ MonoBehaviour:
   contract: {fileID: 1522019952007674517, guid: 714592fd68c4da2459d5b82f2f5b309b, type: 3}
   objectDisc: {fileID: 6133372232154859925, guid: 61cb6d17cb6cd8a4caa9eff29c89e6b2, type: 3}
   obstacle: {fileID: 996302653782608438, guid: cc6255bb40316c6458e8727b924a7c27, type: 3}
+  obstacle2: {fileID: 996302653782608438, guid: 48aea5f6859ef234190f969adbcc352d, type: 3}
   interval: 1.5
   obstacleInterval: 4

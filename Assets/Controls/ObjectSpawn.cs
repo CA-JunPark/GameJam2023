@@ -7,6 +7,7 @@ public class ObjectSpawn : MonoBehaviour
     public GameObject contract;
     public GameObject objectDisc;
     public GameObject obstacle;
+    public GameObject obstacle2;
 
     // float timer = 0;
 
@@ -62,7 +63,13 @@ public class ObjectSpawn : MonoBehaviour
 
         if (obstacleInterval < 0){
             obstacle.transform.position = new Vector3(spawnX, grid[1]);
-            Instantiate(obstacle);
+            rand = Random.Range(0,10);
+            if (rand < 5){
+                Instantiate(obstacle);
+            }
+            else{
+                Instantiate(obstacle2);
+            }
             obstacleInterval = Mathf.Clamp(initialObstacleInterval + Random.Range(-2,2), initialInterval - 1, initialInterval + 1);
         }
     }

@@ -49,10 +49,10 @@ public class MusicianControl : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.gameObject.layer == 11){
-            Destroy(gameObject);
             MusicianSpawn.capturedCount ++;
             MusicianSpawn.spawned = false;
             CharacterMovement.characterSpeed ++;
+            Destroy(gameObject);
         }
     }
 

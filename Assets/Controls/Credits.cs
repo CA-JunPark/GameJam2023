@@ -77,8 +77,7 @@ public class Credits : MonoBehaviour
         text.text = "CREDIT";
     }
     public void SetControls(){
-        text.text = "CONTROLS";
-        Debug.Log("CON");
+        text.text = "Jump: Z / Left Mouse\nShoot: X / Mouse Right\n    (Need a disc)";
     }
     public void Close(){
         opened = false;

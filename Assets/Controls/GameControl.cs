@@ -23,6 +23,9 @@ public class GameControl : MonoBehaviour
 
     Animator animator;
 
+    Score scoreScript;
+    GameObject highScore;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,10 +45,14 @@ public class GameControl : MonoBehaviour
         creditScript = GameObject.Find("Credits").GetComponent<Credits>();
         controls = GameObject.Find("Controls");
         exit = GameObject.Find("Exit");
+
+        highScore = GameObject.Find("HighScore");
         
         canvas = GameObject.Find("Canvas");
         
         animator = GetComponent<Animator>();
+
+        scoreScript = GetComponent<Score>();
 
         Stop();
     }
@@ -84,7 +91,9 @@ public class GameControl : MonoBehaviour
         life3.SetActive(true);
 
         animator.SetBool("Running", true);
-        //TODO Score Reset
+
+        scoreScript.ResetCurrentScore();
+        highScore.SetActive(false);
     }
 
     void Stop(){
@@ -105,8 +114,11 @@ public class GameControl : MonoBehaviour
         credits.SetActive(true);
         controls.SetActive(true);
         exit.SetActive(true);
-
+    
         Shooting.loaded = false;
+        highScore.SetActive(true);
+        scoreScript.HighScoreUpdate();
+        
     }
 
     void OnTriggerEnter2D(Collider2D collider)

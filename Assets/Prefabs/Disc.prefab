@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6412654001538611887}
   - component: {fileID: 1217559562677537040}
   - component: {fileID: 8882084176511522562}
-  - component: {fileID: 1676749819781982471}
+  - component: {fileID: 4635573799789051672}
   - component: {fileID: 50329232719385101}
   m_Layer: 0
   m_Name: Disc
@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6133372232154859925}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.24992484, y: -0.05987835, z: 1}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalPosition: {x: 0.1219998, y: 1.7928599, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -76,8 +76,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.16981131, g: 0.036059424, b: 0.036059424, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 44ab7fa5ab35eba4d8072310f2494e3b, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -108,7 +108,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &1676749819781982471
+--- !u!58 &4635573799789051672
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -123,7 +123,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.2
 --- !u!114 &50329232719385101
 MonoBehaviour:
   m_ObjectHideFlags: 0
