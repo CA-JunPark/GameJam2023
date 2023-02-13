@@ -11,6 +11,9 @@ public class MusicianControl : MonoBehaviour
     float nextPosX;
     bool spawning = true;
     AudioSource hitSound;
+    Animator animator;
+
+    AudioSource backgroundMusic;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +23,8 @@ public class MusicianControl : MonoBehaviour
         interval = (initialX - jukeBoxX) / 4;
         nextPosX = CalcNextPosX();
         hitSound = GetComponent<AudioSource>();
+        animator = GetComponent<Animator>();
+        backgroundMusic = GameObject.Find("BackgroundMusic").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -34,7 +39,9 @@ public class MusicianControl : MonoBehaviour
         }
         if (hit){
             transform.position += Vector3.left * Time.deltaTime * CharacterMovement.characterSpeed;
+            animator.SetBool("Hit", true);
             if (transform.position.x <= nextPosX){
+                animator.SetBool("Hit", false);
                 hit = false;
                 nextPosX = CalcNextPosX();
             }
@@ -51,7 +58,8 @@ public class MusicianControl : MonoBehaviour
         if (collider.gameObject.layer == 11){
             MusicianSpawn.capturedCount ++;
             MusicianSpawn.spawned = false;
-            CharacterMovement.characterSpeed ++;
+            CharacterMovement.characterSpeed += 2;
+            backgroundMusic.pitch *= 1.03f;
             Destroy(gameObject);
         }
     }

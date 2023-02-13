@@ -74,7 +74,7 @@ public class Credits : MonoBehaviour
 
     // TODO Change Strings
     public void SetCredit(){
-        text.text = "CREDIT";
+        text.text = "Jun (Programmer)\nAriel (Art)\nHenry (Sound)\nPaul (Design)";
     }
     public void SetControls(){
         text.text = "Jump: Z / Left Mouse\nShoot: X / Mouse Right\n    (Need a disc)";

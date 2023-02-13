@@ -17,6 +17,7 @@ public class Score : MonoBehaviour
         highScoreText = GameObject.Find("HighScore").GetComponent<TMP_Text>();
         currentScoreText = GameObject.Find("CurrentScore").GetComponent<TMP_Text>();
         currentScore = 0;
+        highScore = PlayerPrefs.GetInt("HighScore");
         highScoreText.text = "High Score: " + highScore;
         
     }
@@ -43,6 +44,7 @@ public class Score : MonoBehaviour
     public void HighScoreUpdate(){
         if (currentScore > highScore){
             highScore = currentScore;
+            PlayerPrefs.SetInt("HighScore", highScore);
             highScoreText.text = "High Score: " + highScore;
         }
     }

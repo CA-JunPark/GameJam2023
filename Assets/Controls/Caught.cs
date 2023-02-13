@@ -18,7 +18,6 @@ public class Caught : MonoBehaviour
     {
         
     }
-    //9
 
     void OnTriggerEnter2D(Collider2D collider)
     {

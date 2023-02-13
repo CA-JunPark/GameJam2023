@@ -26,6 +26,9 @@ public class GameControl : MonoBehaviour
     Score scoreScript;
     GameObject highScore;
 
+    AudioSource backgroundMusic;
+    GameObject title;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -53,6 +56,10 @@ public class GameControl : MonoBehaviour
         animator = GetComponent<Animator>();
 
         scoreScript = GetComponent<Score>();
+
+        backgroundMusic = GameObject.Find("BackgroundMusic").GetComponent<AudioSource>();
+
+        title = GameObject.Find("Title");
 
         Stop();
     }
@@ -94,6 +101,7 @@ public class GameControl : MonoBehaviour
 
         scoreScript.ResetCurrentScore();
         highScore.SetActive(false);
+        title.SetActive(false);
     }
 
     void Stop(){
@@ -118,7 +126,9 @@ public class GameControl : MonoBehaviour
         Shooting.loaded = false;
         highScore.SetActive(true);
         scoreScript.HighScoreUpdate();
-        
+
+        backgroundMusic.pitch = 1;
+        title.SetActive(true);
     }
 
     void OnTriggerEnter2D(Collider2D collider)
